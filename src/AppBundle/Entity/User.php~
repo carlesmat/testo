@@ -1,0 +1,40 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="user")
+ */
+class User
+{
+  /**
+   * @ORM\Id
+   * @ORM\Column(type="integer")
+   * @ORM\GeneratedValue(strategy="AUTO")
+   */
+    private $id;
+
+    /**
+     * Número d'equips que té l'usuari
+     *
+     * @ORM\Column(type="integer", name="numero_equips", options={"unsigned":true, "default":0})
+     */
+    private $nEquips;
+
+    /**
+     * Número de certificats que té l'usuari
+     *
+     * @ORM\Column(type="integer", name="numero_certificats", options={"unsigned":true, "default":0})
+     */
+    private $nCertificats;
+
+    /**
+     * Tipus d'usuari (final/SAP)
+     *
+     * @ORM\Column(type="string", length=15, name="tipus_client", nullable=false, options={"default":"final", "fixed":false, "comment":"Indica si és un client SAP o és un client FINAL"})
+     */
+    private $sTipusClient = 'final';
+}

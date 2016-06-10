@@ -1,0 +1,159 @@
+{% extends 'testo.html.twig' %}
+
+    {% block title %}Testo Instruments{% endblock %}
+
+    {% block topmenu %}
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="/logo_top.png" /></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a class="menu" href="index.html"><i class="fa fa-dashboard fa-fw"></i> Resumen</a>
+                        </li>
+                        <li>
+                            <a class="menu" href="tables.html"><i class="fa fa-barcode fa-fw"></i> Equipos</a>
+                        </li>
+                        <li>
+                            <a class="menu" href="forms.html"><i class="fa fa-file-pdf-o fa-fw"></i> Certificados</a>
+                        </li>
+                        <li>
+                            <a class="menu" href="forms.html"><i class="fa fa-book fa-fw"></i> Documentación</a>
+                        </li>
+                        <li>
+                            <a class="menu" href="forms.html"><i class="fa fa-envelope fa-fw"></i> Contacta con nosotros</a>
+                        </li>
+                        <!-- /.dropdown -->
+                        <li class="dropdown">
+                            <a class="menu" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-search fa-fw"></i> <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-search">
+                                <li>
+                                    <form class="navbar-form navbar-left" role="search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Buscar...">
+                                            <span class="input-group-btn">
+                                                <button type="submit" class="btn btn-default" type="button">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                            <!-- /.dropdown-cerca -->
+                        </li>
+                        <!-- /.dropdown -->
+                        <li class="dropdown">
+                            <a class="menu" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a class="menu" href="#"><i class="fa fa-user fa-fw"></i> Perfil</a>
+                                </li>
+                                <li><a class="menu" href="#"><i class="fa fa-gear fa-fw"></i> Configuración</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a class="menu" href="login.html"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
+                                </li>
+                            </ul>
+                            <!-- /.dropdown-user -->
+                        </li>
+                        <!-- /.dropdown -->
+                    </ul>
+                    <!-- /.navbar-top-links -->
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    {% endblock %}
+
+
+{% block body %}
+ <div id="page-wrapper2">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Resumen</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-yellow">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-barcode fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">4</div>
+                            <div>Equipos</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">Ver detalles</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-file-pdf-o fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">12</div>
+                            <div>Certificados</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">Ver detalles</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-envelope fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">3</div>
+                            <div>Mensajes</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">Ver detalles</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+ </div>
+{% endblock %}
+

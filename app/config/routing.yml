@@ -1,0 +1,38 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+
+resumen:
+  path: /resumen
+  defaults: { _controller: AppBundle:User:resumen }
+
+equipos:
+  path: /equipos
+  defaults: { _controller: AppBundle:User:equipos }
+
+equipo:
+  path: /equipo/{nserie}
+  defaults: { _controller: AppBundle:User:equipo }
+
+certificados:
+  path: /certificados
+  defaults: { _controller: AppBundle:User:certificados }
+
+patron:
+  path: /patron/{nombre}
+  defaults: { _controller: AppBundle:User:patron }
+
+certificado:
+  path: /certificado/{nombre}
+  defaults: { _controller: AppBundle:User:certificado }
+
+usuaris:
+  path: /usuaris
+  defaults: { _controller: AppBundle:User:usuaris }
+
+users:
+  type:     rest
+#  resource: AppBundle\Controller\UsersController
+  resource: AppBundle\Controller\UsersController
+  prefix: api

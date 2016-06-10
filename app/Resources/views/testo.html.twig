@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    {% stylesheets '@bootstrap_css' '@testo_css' '@jquery_data_grid_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+  </head>
+  <body>
+    <div id="wrapper">
+      {% block topmenu %}
+        {{  include ('menuleft.html.twig', { 'select' : 'resumen'}) }}
+      {% endblock %}
+      {% block body %}
+        <div id="page-wrapper"></div>
+      {% endblock %}
+    </div>
+    {% block javascripts %}{% endblock %}
+    {% javascripts '@jquery' '@bootstrap_js' '@testo_js' '@jquery_data_grid_js' %}
+      <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% block endjavascripts %}{% endblock %}
+  </body>
+</html>
